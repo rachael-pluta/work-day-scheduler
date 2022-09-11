@@ -7,7 +7,7 @@ $(document).ready(function () {
         var event = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
         localStorage.setItem(time, event);
-    })
+    });
 
     // Determines current time and color codes timeblocks to past, present and future
     function determineTime() {
@@ -30,9 +30,9 @@ $(document).ready(function () {
                 $(this).addClass("future");
                 $(this).removeClass("past");
                 $(this).removeClass("present");
-            }
-        })
-    }
+            };
+        });
+    };
 
         // Gets the event from local storage
         $("#hour7 .description").val(localStorage.getItem("hour7"));
