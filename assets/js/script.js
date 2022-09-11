@@ -14,40 +14,41 @@ $(document).ready(function () {
         var currentTime = moment().hour();
 
         $(".time-block").each(function () {
-            var eventTime = parseInt($(this).attr("id").split("hour")[1]);
+            var eventTime = parseInt($(".time-block").attr('id').split("hour")[1]);
 
             if (eventTime < currentTime) {
-                $(eventTime).addClass("past");
-                $(eventTime).removeClass("present");
-                $(eventTime).removeClass("future");
+                $(this).addClass("past");
+                $(this).removeClass("present");
+                $(this).removeClass("future");
             }
             else if (eventTime === currentTime) {
-                $(eventTime).addClass("present");
-                $(eventTime).removeClass("past");
-                $(eventTime).removeClass("future");
+                $(this).addClass("present");
+                $(this).removeClass("past");
+                $(this).removeClass("future");
             }
             else {
-                $(eventTime).addClass("future");
-                $(eventTime).removeClass("past");
-                $(eventTime).removeClass("present");
+                $(this).addClass("future");
+                $(this).removeClass("past");
+                $(this).removeClass("present");
             }
         })
     }
 
         // Gets the event from local storage
-        $("#7hours .description").val(localStorage.getItem("7hours"));
-        $("#8hours .description").val(localStorage.getItem("8hours"));
-        $("#9hours .description").val(localStorage.getItem("9hours"));
-        $("#10hours .description").val(localStorage.getItem("10hours"));
-        $("#11hours .description").val(localStorage.getItem("11hours"));
-        $("#12hours .description").val(localStorage.getItem("12hours"));
-        $("#13hours .description").val(localStorage.getItem("13hours"));
-        $("#14hours .description").val(localStorage.getItem("14hours"));
-        $("#15hours .description").val(localStorage.getItem("15hours"));
-        $("#16hours .description").val(localStorage.getItem("16hours"));
-        $("#17hours .description").val(localStorage.getItem("17hours"));
-        $("#18hours .description").val(localStorage.getItem("18hours"));
-        $("#19hours .description").val(localStorage.getItem("19hours"));
+        $("#hour7 .description").val(localStorage.getItem("hour7"));
+        $("#hour8 .description").val(localStorage.getItem("hour8"));
+        $("#hour9 .description").val(localStorage.getItem("hour9"));
+        $("#hour10 .description").val(localStorage.getItem("hour10"));
+        $("#hour11 .description").val(localStorage.getItem("hour11"));
+        $("#hour12 .description").val(localStorage.getItem("hour12"));
+        $("#hour13 .description").val(localStorage.getItem("hour13"));
+        $("#hour14 .description").val(localStorage.getItem("hour14"));
+        $("#hour15 .description").val(localStorage.getItem("hour15"));
+        $("#hour16 .description").val(localStorage.getItem("hour16"));
+        $("#hour17 .description").val(localStorage.getItem("hour17"));
+        $("#hour18 .description").val(localStorage.getItem("hour18"));
+        $("#hour19 .description").val(localStorage.getItem("hour19"));
 
+        // Executes for loop based on current time
         determineTime();
     })
