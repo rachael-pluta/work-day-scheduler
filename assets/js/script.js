@@ -14,22 +14,22 @@ $(document).ready(function () {
         var currentTime = moment().hour();
 
         $(".time-block").each(function () {
-            var eventTime = parseInt($(".time-block").attr('id').split("hour")[1]);
+            var eventTime = parseInt($(this).attr("id").split("hour")[1]);
 
             if (eventTime < currentTime) {
-                $(this).addClass("past");
                 $(this).removeClass("present");
                 $(this).removeClass("future");
+                $(this).addClass("past");
             }
             else if (eventTime === currentTime) {
-                $(this).addClass("present");
                 $(this).removeClass("past");
                 $(this).removeClass("future");
+                $(this).addClass("present");
             }
             else {
-                $(this).addClass("future");
                 $(this).removeClass("past");
                 $(this).removeClass("present");
+                $(this).addClass("future");
             };
         });
     };
@@ -51,4 +51,4 @@ $(document).ready(function () {
 
         // Executes for loop based on current time
         determineTime();
-    })
+    })  
