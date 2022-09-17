@@ -9,11 +9,16 @@ N/A
 ## Usage
 The work day scheduler displays the current day at the top of the page. 
 
-![]
+![White background with large black Work Da Scheduler title, displaying current day and first two one hour time blocks for the day with blue save button on right side](https://raw.githubusercontent.com/rachael-pluta/work-day-scheduler/main/assets/images/current%20day.png)
 
 To enable the employee to determine which tasks / meetings have passed and those that are upcoming, the scheduler color codes each one hour time block based on whether it is in the "past", "present" or "future".  Past timeblocks are color coded grey, current timeblocks are color coded red, and future timeblocks are color coded green.
 
+![It is 4pm, so the 3pm timeblock is grey, the 4pm timeblock is red, and the 5pm to 7pm timeblocks are green](https://raw.githubusercontent.com/rachael-pluta/work-day-scheduler/main/assets/images/timeblock.png)
+
+The user can input text into the relevant time block, click the blue save button and the user's entry will be saved to local storage.  This means that the user's entry will remain when the page is refreshed. 
+
 ## Deployed Webpage
+Available here [https://rachael-pluta.github.io/work-day-scheduler/].
 
 ## Credits
 N/A
